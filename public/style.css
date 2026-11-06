@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.converter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input, select, button {
+    padding: 8px;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер температур</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a90d9">
+</head>
+<body>
+    <h1>Привет! Мой сервер работает.</h1>
+    <div class="converter">
+        <input type="number" id="temp-value" placeholder="Значение" step="any">
+        <select id="from-unit">
+            <option value="C">Цельсий (°C)</option>
+            <option value="F">Фаренгейт (°F)</option>
+            <option value="K">Кельвин (K)</option>
+        </select>
+        <span>-></span>
+        <select id="to-unit">
+            <option value="F">Фаренгейт (°F)</option>
+            <option value="C">Цельсий (°C)</option>
+            <option value="K">Кельвин (K)</option>
+        </select>
+        <button id="convert-btn">Конвертировать</button>
+    </div>
+    <div id="result"></div>
+    <a href="about.html">О себе</a>
+    
+    <script src="app.js?v=3"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                .then(registration => console.log('SW зарегестрирован:', registration.scope))
+                .catch(err => console.log('Ошибка регистрации SW:', err));
+            });
+        }
+    </script>
+</body>
+</html>
